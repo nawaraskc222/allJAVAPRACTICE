@@ -1,0 +1,21 @@
+package demo;
+
+import java.util.Date;
+
+public class tester {
+		
+		
+		
+	public static void main(String[] args)  {
+
+			
+//		SessionFactory f= new Configuration().configure().openSession();
+		
+		
+		
+	}
+	
+}
+
+
+

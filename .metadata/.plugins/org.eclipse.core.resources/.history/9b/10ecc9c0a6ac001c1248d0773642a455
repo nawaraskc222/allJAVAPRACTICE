@@ -1,0 +1,15 @@
+package com.map;
+
+import javax.persistence.*;
+
+@Entity
+public class Answer {
+	
+	@Id
+	@Column(name="answer_id")
+	private int answer_Id;
+	private String answer;
+	
+	
+
+}

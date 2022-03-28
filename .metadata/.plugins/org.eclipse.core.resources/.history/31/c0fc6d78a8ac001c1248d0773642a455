@@ -1,0 +1,10 @@
+package com.map2;
+
+public class mapDemo {
+	
+
+	
+		public static void main(String args[]) {
+			
+		}
+}

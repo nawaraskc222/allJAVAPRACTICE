@@ -1,0 +1,19 @@
+package com.java.hibernate;
+
+import org.hibernate.cfg.Configuration;
+import org.hibernate.SessionFactory;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project started" );
+        
+        Configuration cfg= new Configuration();
+        
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+      
+        
+        
+    }}

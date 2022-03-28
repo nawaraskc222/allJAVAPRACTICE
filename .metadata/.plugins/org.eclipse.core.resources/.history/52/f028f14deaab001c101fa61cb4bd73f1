@@ -1,0 +1,67 @@
+package com.java.hibernate;
+
+import org.hibernate.cfg.Configuration;
+
+
+import com.mysql.cj.Session;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Date;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class App 
+{
+    public static void main( String[] args ) throws IOException
+    {
+    	////HIBERNATE 
+//    	This uses ANNOTATION through configuration
+        System.out.println( "Project started" );
+        
+        Configuration cfg= new Configuration();
+        
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+      
+        //Creating student
+        Student st= new Student();
+        st.setId(103);
+        st.setName("NIS");
+        st.setCity("LONDON");
+        
+        System.out.println(st);
+        
+        //crating for ADDRESS obj
+        Date d= new Date();
+        
+        Address ad= new Address();
+        ad.setStreet("street_1");
+        ad.setCity("KTM");
+        ad.setOpen(true);
+//        ad.setAddedDate(new Date());
+        ad.setX(1215.0151);
+        
+        //READING IMAGE
+        FileInputStream fis= new FileInputStream("src/main/java/img.jpg");
+        
+        byte [] data= new byte[fis.available()];
+        fis.read(data);
+        ad.setImage(data);
+       
+        
+        
+        org.hibernate.Session session=factory.openSession();
+        
+        Transaction tx=session.beginTransaction();
+        
+        session.save(st);
+        session.save(ad);
+        
+        tx.commit();
+        session.close();
+        System.out.println("DONE");
+        
+    }}

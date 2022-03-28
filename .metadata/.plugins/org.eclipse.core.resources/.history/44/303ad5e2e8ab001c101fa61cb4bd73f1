@@ -1,0 +1,23 @@
+package com.java.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class EmDemo {
+	
+	public static void main(String args[]) {
+		
+		Configuration cfg= new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+        
+        Student student1= new Student();
+        student1.setId(124);
+        student1.setName("SELISHA");
+        student1.setCity("BKT");
+        
+        
+        factory.close();
+	}
+
+}

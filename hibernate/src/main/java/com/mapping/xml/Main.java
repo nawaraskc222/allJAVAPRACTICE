@@ -1,0 +1,33 @@
+package com.mapping.xml;
+
+
+
+import org.hibernate.*;
+import org.hibernate.cfg.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		SessionFactory f= new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	
+		org.hibernate.Session s= f.openSession();
+		
+					Transaction tx=s.beginTransaction();
+				
+		
+					Person p1= new Person(23,"RAM","KTM","9811");
+		
+					
+					
+					s.save(p1);				
+				
+				s.close();
+				f.close();
+	
+	
+	}
+
+}

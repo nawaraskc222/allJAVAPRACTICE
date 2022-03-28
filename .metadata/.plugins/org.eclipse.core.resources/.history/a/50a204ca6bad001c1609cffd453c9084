@@ -1,0 +1,20 @@
+package com.State;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class stateDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//object in States
+		//transisent, persistance,detached, removal states
+		
+		
+		SessionFactory f=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+
+		
+	}
+
+}

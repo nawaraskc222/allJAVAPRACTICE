@@ -1,0 +1,10 @@
+package com.java.hibernate;
+
+public class Address {
+	
+	private int addressIf;
+	private String street;
+	private String city;
+	
+
+}

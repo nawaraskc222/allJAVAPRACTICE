@@ -1,0 +1,43 @@
+package com.java.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class EmDemo {
+	
+	public static void main(String args[]) {
+		
+		Configuration cfg= new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+        
+        Student student1= new Student();
+        student1.setId(124);
+        student1.setName("SELISHA");
+        student1.setCity("BKT");
+        
+        Student student2= new Student();
+        student2.setId(123);
+        student2.setName("SITAL");
+        student2.setCity("DELHI");
+        
+        
+        Certificate  Certificate=new Certificate();
+        Certificate.setCourse("BSC CSIT");
+        Certificate.setDuration("2months");
+        
+        Certificate  Certificate1=new Certificate();
+        Certificate1.setCourse("BBLA");
+        Certificate1.setDuration("4 yearrs");
+        
+        
+        student1.setCerti(Certificate);
+        student2.setCerti(Certificate1);
+        
+        //        student1.setCerti(certificate1);
+//        student1.setCerti(certificate);
+        
+        factory.close();
+	}
+
+}

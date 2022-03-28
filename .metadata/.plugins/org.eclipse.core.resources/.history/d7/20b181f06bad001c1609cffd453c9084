@@ -1,0 +1,34 @@
+package com.State;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.java.hibernate.*;
+
+public class stateDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//object in States
+		//transisent, persistance,detached, removal states
+		
+		
+		SessionFactory f=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+
+		
+		//creating student obj
+		
+		Student student = new Student();
+		student.setId(1012);
+		student.setName("NAWARAS");
+		student.setCity("BKT");
+		student.setCerti(new Certificate("JAVA COURSE","2 months"));
+		///student : Transient
+		
+
+		
+		f.close();
+	}
+
+}

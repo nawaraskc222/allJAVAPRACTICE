@@ -1,0 +1,38 @@
+package com.map2;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class mapDemo {
+	
+
+	
+		public static void main(String args[]) {
+			
+			
+			
+			
+			 System.out.println( "Project started" );
+		        
+		        Configuration cfg= new Configuration();
+		        cfg.configure("hibernate.cfg.xml");
+		        SessionFactory factory=cfg.buildSessionFactory();
+		        
+		        
+		        
+		        
+		        
+		        
+		        org.hibernate.Session session=factory.openSession();
+		        
+		        Transaction tx=session.beginTransaction();
+		        
+//		        session.save(st);
+//		        session.save(ad);
+		        
+		        tx.commit();
+		        session.close();
+		        System.out.println("DONE");
+		}
+}

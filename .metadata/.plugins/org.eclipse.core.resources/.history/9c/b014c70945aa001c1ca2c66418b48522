@@ -1,0 +1,36 @@
+package com.java.hibernate;
+
+import org.hibernate.cfg.Configuration;
+
+import com.mysql.cj.Session;
+
+import org.hibernate.SessionFactory;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project started" );
+        
+        Configuration cfg= new Configuration();
+        
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+      
+        //Creating student
+        Student st= new Student();
+        st.setId(101);
+        st.setName("HARI");
+        st.setCity("KTM");
+        
+        System.out.println(st);
+        
+        org.hibernate.Session session=factory.getCurrentSession();
+        
+        session.beginTransaction();
+        session.save(st);
+        session.getTransaction().commit();
+        
+        session.close();
+        
+    }}

@@ -1,0 +1,13 @@
+package com.State;
+
+public class stateDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//object in States
+		//transisent, persistance,detached, removal states
+
+	}
+
+}

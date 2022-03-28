@@ -1,0 +1,54 @@
+package demo;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+import java.util.Date;
+
+import javax.swing.*;
+
+
+public class tester extends JPanel{
+		
+		
+		
+	public static void main(String[] args)  {
+				
+			System.out.println("BOSS YOU ARE ON");
+			
+			
+			JFrame f= new JFrame("asd");
+			f.setVisible(true);
+//			f.setSize(155, 015);
+			f.setBounds(100, 100, 500, 400);
+			
+			JPanel p=new JPanel();
+			
+			
+			JButton btn= new JButton("Click me");
+//			p.add(new JButton("click me"));
+			
+			btn.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					
+					System.out.println("haha done");
+					
+				}
+				
+			} );
+				
+			
+			p.add(btn);
+			
+
+			
+			f.add(p);
+	}
+	
+}
+
+
+

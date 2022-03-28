@@ -1,0 +1,32 @@
+package demo;
+
+import java.util.*;
+import java.util.Date;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+
+public class tester {
+		
+		
+		
+	public static void main(String[] args)  {
+				
+			System.out.println("BOSS YOU ARE ON");
+			
+			
+			JFrame f= new JFrame("asd");
+			f.setVisible(true);
+//			f.setSize(155, 015);
+			f.setBounds(100, 100, 500, 400);
+			
+			f.add(new JButton("click me"));
+			
+			
+	}
+	
+}
+
+
+

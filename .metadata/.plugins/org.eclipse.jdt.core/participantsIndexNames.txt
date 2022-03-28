@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\Mr.Nobody\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1044812349.index
+\noteTaker\src\main\resources
+C:\Users\Mr.Nobody\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2802688989.index
+\NotTaker\src\main\resources

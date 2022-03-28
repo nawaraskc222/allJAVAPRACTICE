@@ -1,0 +1,12 @@
+package com.map2;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Project {
+	
+	private int pid;
+	private String projectName;
+	
+
+}
